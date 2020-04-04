@@ -1,0 +1,29 @@
+{
+	// ↓ vscode settings
+
+	"editor.rulers": [
+		100,
+		120
+	],
+
+
+	// ↓ Extension settings
+
+	"todohighlight.keywords": [
+		{
+			"text": "FIXME",
+			"backgroundColor": "#F06292",
+			"overviewRulerColor": "#F06292",
+			"color": "#FFFFFF"
+		},
+		{
+			"text": "TODO",
+			"backgroundColor": "#FFBD2A",
+			"overviewRulerColor": "#FFBD2A",
+			"color": "#FFFFFF"
+		}
+	],
+
+
+	// ↓ Misc.
+}
