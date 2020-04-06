@@ -3,6 +3,8 @@
 Smart Home project for personal use.
 Unifies the management of various device types like smart plugs, smart radiator controls, robotic vacuum cleaner, etc.
 
+This repo actually puts [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) in action.
+
 
 ## Ready, ...
 
