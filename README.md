@@ -51,8 +51,21 @@ Follow the below step-by-step instructions:
 	* Close the SSH connection
 
 
+## ...steady, ...
+
+1. Copy relevant files to the Ras Pi:
+```
+$	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
+```
+2. Install *my-smart-home* dependencies:
+```
+$	ssh pi@my-smart-home 'bash -s' < ./install.sh
+```
+
+
 ## Sources
 
 * [The official Raspberry Pi documentation](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started)
 * https://www.paulin.at/projects/wall-e/building-instructions/software/setting-up-your-raspberry-pi/
 * https://technikkram.net/2016/12/raspberry-pi-ssh-aktivieren-bei-raspbian-jessie-lite
+* https://www.simplified.guide/ssh/copy-file
