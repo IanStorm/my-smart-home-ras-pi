@@ -22,7 +22,7 @@ Be sure to call the following hardware your own:
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
 
 
-### Prepare the software
+### Prepare the software, pt. 1
 
 Follow the below step-by-step instructions:
 
@@ -39,6 +39,20 @@ Follow the below step-by-step instructions:
 2. Insert the Micro SD card into the Ras Pi, connect the ethernet cable, connect the power supply; the Ras Pi will automatically start
 
 
+### Prepare the software, pt. 2
+
+1. Clone this repository.
+2. `cd` inside the cloned folder.
+2. Make sure to copy the (exactly same) files from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./home/pi/my-smart-home/credentials/`.
+2. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
+2. Initially connect via SSH: `ssh pi@my-smart-home`
+	* There will be a prompt to add the fingerprint, type `yes`
+	* The default credentials for any Ras Pi are `pi` (user) and `raspberry` (password)
+	* Close the SSH connection
+
+
 ## Sources
 
 * [The official Raspberry Pi documentation](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started)
+* https://www.paulin.at/projects/wall-e/building-instructions/software/setting-up-your-raspberry-pi/
+* https://technikkram.net/2016/12/raspberry-pi-ssh-aktivieren-bei-raspbian-jessie-lite
