@@ -1,6 +1,6 @@
 # My Smart Home - Raspberry Pi
 
-Smart Home project for personal use.
+Smart Home project for **private purposes**.
 Unifies the management of various device types like smart plugs, smart radiator controls, robotic vacuum cleaner, etc.
 
 This repo actually puts [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) in action.
