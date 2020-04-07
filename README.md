@@ -93,3 +93,8 @@ Now the Raspberry Pi is ready to rock your smart home. 🤘
 * https://technikkram.net/2016/12/raspberry-pi-ssh-aktivieren-bei-raspbian-jessie-lite
 * https://www.simplified.guide/ssh/copy-file
 * https://www.raspberrypi.org/blog/how-to-run-a-script-at-start-up-on-a-raspberry-pi-using-crontab/
+
+
+### Alternatives
+
+* https://www.heise.de/ct/artikel/Stefan-Portecks-privates-Smart-Home-openHAB-vereint-einzelne-Komponenten-4688703.html
