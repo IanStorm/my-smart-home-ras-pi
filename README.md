@@ -63,6 +63,27 @@ $	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 ```
+3. Setup cron jobs for *my-smart-home*:
+	1. Connect via SSH again: `ssh pi@my-smart-home`
+	2. Start `crontab -e`, select `nane` as your editor if prompted
+	3. Jump to the end of the file by pressing STRG+END
+	4. Enter the following content:
+```
+# Auto-start `my-smart-home` on each boot
+@reboot ~/my-smart-home/get.sh && ~/my-smart-home/start.sh
+
+# Auto-update of `my-smart-home`, daily at 3:30am
+30 3 * * * ~/my-smart-home/update.sh
+```
+*
+	5. Leave the editor by pressing STRG+X, then Y, then ENTER
+	6. Enter `exit` to close the SSH session
+
+
+## ...go! 🏃‍♂️ 🏃‍♀️
+
+Done!
+Now the Raspberry Pi is ready to rock your smart home. 🤘
 
 
 ## Sources
@@ -71,3 +92,4 @@ $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 * https://www.paulin.at/projects/wall-e/building-instructions/software/setting-up-your-raspberry-pi/
 * https://technikkram.net/2016/12/raspberry-pi-ssh-aktivieren-bei-raspbian-jessie-lite
 * https://www.simplified.guide/ssh/copy-file
+* https://www.raspberrypi.org/blog/how-to-run-a-script-at-start-up-on-a-raspberry-pi-using-crontab/
