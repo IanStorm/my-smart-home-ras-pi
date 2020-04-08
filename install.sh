@@ -1,4 +1,5 @@
 #!/bin/bash
+
 sudo apt update
 
 # ↓ Enable auto-update

@@ -59,11 +59,15 @@ Follow the below step-by-step instructions:
 ```
 $	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
 ```
-2. Install *my-smart-home* dependencies:
+2. Configure Ras Pi:
+```
+$	ssh pi@my-smart-home 'bash -s' < ./configure.sh
+```
+3. Install *my-smart-home* dependencies:
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 ```
-3. Setup cron jobs for *my-smart-home*:
+4. Setup cron jobs for *my-smart-home*:
 	1. Connect via SSH again: `ssh pi@my-smart-home`
 	2. Start `crontab -e`, select `nane` as your editor if prompted
 	3. Jump to the end of the file by pressing STRG+END
