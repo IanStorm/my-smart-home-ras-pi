@@ -45,7 +45,7 @@ Follow the below step-by-step instructions:
 
 1. Clone this repository.
 2. `cd` inside the cloned folder.
-2. Make sure to copy the (exactly same) files from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./home/pi/my-smart-home/credentials/`.
+2. Make sure to copy the (exactly same) file(s) from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./home/pi/my-smart-home/credentials/`.
 2. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
 2. Initially connect via SSH: `ssh pi@my-smart-home`
 	* There will be a prompt to add the fingerprint, type `yes`
