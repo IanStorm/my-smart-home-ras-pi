@@ -18,9 +18,9 @@ Be sure to call the following hardware your own:
 	* ...with a mouse, keyboard, display, etc.
 	* ...with an SD card reader
 * Permanent, i.e. dedicated to the Ras Pi:
-	* 1x Raspberry Pi *(here: Raspberry Pi 3, Model B, 1GB RAM)*
-	* 1x Micro SD card *(here: SanDisk Ultra 32GB)*
-	* 1x Power supply, Raspberry Pi-compatible *(here: Micro USB charger)*
+	* 1x Raspberry Pi *(here: Raspberry Pi 4, Model B, 2GB RAM)*
+	* 1x Micro SD card *(here: SanDisk Extreme 32GB)*
+	* 1x Power supply, Raspberry Pi-compatible *(here: Official USB-C Power Supply)*
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
 
 
@@ -31,11 +31,11 @@ Follow the below step-by-step instructions:
 1. Connect the Micro SD card to the computer
 2. Download, install, and run **Raspberry Pi Imager**:
 	* Tested with v1.2 on Windows
-	* Choose **Raspbian Lite** as the Operating System (OS)
+	* Choose OS: Raspbian (other) -> **Raspbian Lite**
 	* Write to the Micro SD card
 2. Enable SSH:
-	1. Open a file explorer, 2 new accessible partitions should be visible now; they belong to the Micro SD card
-	2. Navigate to the partition called **"boot"**
+	1. It may be required to eject and re-insert the SD card
+	2. Open a file explorer, navigate to the drive called **"boot"**
 	2. Create a file called **`ssh`** (no extension, no content) on root level
 2. Eject the Micro SD card from the computer
 2. Insert the Micro SD card into the Ras Pi, connect the ethernet cable, connect the power supply; the Ras Pi will automatically start
@@ -63,13 +63,13 @@ $	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./configure.sh
 ```
-3. Install *my-smart-home* dependencies:
+3. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 ```
 4. Setup cron jobs for *my-smart-home*:
 	1. Connect via SSH again: `ssh pi@my-smart-home`
-	2. Start `crontab -e`, select `nane` as your editor if prompted
+	2. Start `crontab -e`, select `/bin/nano` as your editor if prompted
 	3. Jump to the end of the file by pressing STRG+END
 	4. Enter the following content:
 ```
@@ -81,7 +81,10 @@ $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 ```
 *
 	5. Leave the editor by pressing STRG+X, then Y, then ENTER
-	6. Enter `exit` to close the SSH session
+	6. Restart the Ras Pi:
+```
+sudo reboot
+```
 
 
 ## ...go! 🏃‍♂️ 🏃‍♀️
