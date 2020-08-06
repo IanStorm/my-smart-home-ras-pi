@@ -11,6 +11,8 @@ sudo apt-get install -y unattended-upgrades
 sudo apt-get install -y raspberrypi-kernel raspberrypi-kernel-headers
 curl -sSL https://get.docker.com | sh
 sudo usermod -aG docker pi
+# ↓ 	Install docker-compose
+sudo apt-get install -y docker-compose
 
 # ↓ Restart Ras Pi
 sudo reboot

@@ -1,0 +1,19 @@
+version: "3"
+
+
+services:
+
+  my-home-printer:
+    image: ianstorm/my-home-printer:latest
+    ports:
+      - 631:631
+    privileged: true
+    volumes:
+      - /dev/bus/usb/:/dev/bus/usb/
+
+  my-smart-home:
+    image: ianstorm/my-smart-home-node-red:latest
+    env_file: ./credentials/docker-env.list
+    network_mode: host
+    ports:
+      - 1880:1880

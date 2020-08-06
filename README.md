@@ -1,9 +1,9 @@
 # My Smart Home - Raspberry Pi
 
-Smart Home project for **private purposes**.
-Unifies the management of various device types like smart plugs, smart radiator controls, robotic vacuum cleaner, etc.
-
-This repo actually puts [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) in action.
+Garage project for **private purposes**.
+Puts the following repos in action:
+* [IanStorm/my-home-printer](https://github.com/IanStorm/my-home-printer)
+* [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red)
 
 
 ## Ready, ...
@@ -22,6 +22,8 @@ Be sure to call the following hardware your own:
 	* 1x Micro SD card *(here: SanDisk Extreme 32GB)*
 	* 1x Power supply, Raspberry Pi-compatible *(here: Official USB-C Power Supply)*
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
+* Misc.:
+	* 1x USB printer, including power supply and USB cable *(here: HP Photosmart 5520)*
 
 
 ### Prepare the software, pt. 1

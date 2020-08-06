@@ -10,3 +10,8 @@ trim_trailing_whitespace = true
 
 [*.sh]
 end_of_line = lf
+
+
+[*.{yaml,yml}]
+indent_size = 2
+indent_style = space
