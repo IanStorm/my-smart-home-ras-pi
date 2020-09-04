@@ -3,6 +3,7 @@
 Garage project for **private purposes**.
 Puts the following repos in action:
 * [IanStorm/my-home-printer](https://github.com/IanStorm/my-home-printer)
+* [IanStorm/my-smart-home-mqtt](https://github.com/IanStorm/my-smart-home-mqtt)
 * [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red)
 
 

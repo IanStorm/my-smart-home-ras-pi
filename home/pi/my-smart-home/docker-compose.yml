@@ -11,9 +11,17 @@ services:
     volumes:
       - /dev/bus/usb/:/dev/bus/usb/
 
-  my-smart-home:
+  my-smart-home-mqtt:
+    image: ianstorm/my-smart-home-mqtt:latest
+    ports:
+      - 1883:1883
+      - 9001:9001
+
+  my-smart-home-node-red:
     image: ianstorm/my-smart-home-node-red:latest
     env_file: ./credentials/docker-env.list
     network_mode: host
     ports:
       - 1880:1880
+    depends_on:
+      - my-smart-home-mqtt
