@@ -25,3 +25,11 @@ services:
       - 1880:1880
     depends_on:
       - my-smart-home-mqtt
+      - my-smart-home-zigbee2mqtt
+
+  my-smart-home-zigbee2mqtt:
+    image: ianstorm/my-smart-home-zigbee2mqtt:latest
+    devices:
+      - /dev/ttyACM0
+    depends_on:
+      - my-smart-home-mqtt
