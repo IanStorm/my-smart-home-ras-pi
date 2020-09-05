@@ -25,23 +25,23 @@ services:
 
   my-smart-home-node-red:
     image: ianstorm/my-smart-home-node-red:latest
+    depends_on:
+      - my-smart-home-mqtt
+      - my-smart-home-zigbee2mqtt
     env_file: ./credentials/docker-env.list
     networks:
       - smart-home-net
     ports:
       - 1880:1880
-    depends_on:
-      - my-smart-home-mqtt
-      - my-smart-home-zigbee2mqtt
 
   my-smart-home-zigbee2mqtt:
     image: ianstorm/my-smart-home-zigbee2mqtt:latest
-    networks:
-      - smart-home-net
-    devices:
-      - /dev/ttyACM0
     depends_on:
       - my-smart-home-mqtt
+    devices:
+      - /dev/ttyACM0
+    networks:
+      - smart-home-net
 
 
 networks:
