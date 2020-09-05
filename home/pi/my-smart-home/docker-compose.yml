@@ -5,6 +5,8 @@ services:
 
   my-home-printer:
     image: ianstorm/my-home-printer:latest
+    networks:
+      - home-net
     ports:
       - 631:631
     privileged: true
@@ -14,7 +16,7 @@ services:
   my-smart-home-mqtt:
     image: ianstorm/my-smart-home-mqtt:latest
     networks:
-      default:
+      smart-home-net:
         aliases:
           - mqtt-broker
     ports:
@@ -24,7 +26,8 @@ services:
   my-smart-home-node-red:
     image: ianstorm/my-smart-home-node-red:latest
     env_file: ./credentials/docker-env.list
-    network_mode: host
+    networks:
+      - smart-home-net
     ports:
       - 1880:1880
     depends_on:
@@ -34,8 +37,13 @@ services:
   my-smart-home-zigbee2mqtt:
     image: ianstorm/my-smart-home-zigbee2mqtt:latest
     networks:
-      - default
+      - smart-home-net
     devices:
       - /dev/ttyACM0
     depends_on:
       - my-smart-home-mqtt
+
+
+networks:
+  home-net:
+  smart-home-net:
