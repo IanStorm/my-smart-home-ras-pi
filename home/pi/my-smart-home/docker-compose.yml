@@ -41,6 +41,8 @@ services:
       - /dev/ttyACM0
     networks:
       - smart-home-net
+    volumes:
+      - /tmp/my-smart-home-zigbee2mqtt/data/state.json:/app/data/state.json
 
 
 networks:

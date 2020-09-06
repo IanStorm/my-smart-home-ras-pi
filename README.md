@@ -63,6 +63,7 @@ Follow the below step-by-step instructions:
 1. Copy relevant files to the Ras Pi:
 ```
 $	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
+$	scp -r ./tmp/my-smart-home-zigbee2mqtt pi@my-smart-home:/tmp/my-smart-home-zigbee2mqtt
 ```
 2. Configure Ras Pi:
 ```
