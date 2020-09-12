@@ -60,20 +60,24 @@ Follow the below step-by-step instructions:
 
 ## ...steady, ...
 
-1. Copy relevant files to the Ras Pi:
+1. Create file/folder structure:
+```
+$	ssh pi@my-smart-home 'bash -s' < ./prepare.sh
+```
+2. Copy relevant files to the Ras Pi:
 ```
 $	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
-$	scp -r ./tmp/my-smart-home-zigbee2mqtt pi@my-smart-home:/tmp/my-smart-home-zigbee2mqtt
+$	scp -r ./run/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/run/
 ```
-2. Configure Ras Pi:
+3. Configure Ras Pi:
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./configure.sh
 ```
-3. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
+4. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
 ```
 $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 ```
-4. Setup cron jobs for *my-smart-home*:
+5. Setup cron jobs for *my-smart-home*:
 	1. Connect via SSH again: `ssh pi@my-smart-home`
 	2. Start `crontab -e`, select `/bin/nano` as your editor if prompted
 	3. Jump to the end of the file by pressing STRG+END
