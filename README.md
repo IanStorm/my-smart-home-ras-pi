@@ -50,7 +50,7 @@ Follow the below step-by-step instructions:
 
 1. Clone this repository.
 2. `cd` inside the cloned folder.
-2. Make sure to copy the (exactly same) file(s) from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./home/pi/my-smart-home/credentials/`.
+2. Make sure to copy the (exactly same) file(s) from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./opt/my-smart-home/credentials/`.
 2. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
 2. Initially connect via SSH: `ssh pi@my-smart-home`
 	* There will be a prompt to add the fingerprint, type `yes`
@@ -66,7 +66,7 @@ $	ssh pi@my-smart-home 'bash -s' < ./prepare.sh
 ```
 2. Copy relevant files to the Ras Pi:
 ```
-$	scp -r ./home/pi/my-smart-home/ pi@my-smart-home:/home/pi/my-smart-home/
+$	scp -r ./opt/my-smart-home/ pi@my-smart-home:/opt/
 $	scp -r ./run/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/run/
 ```
 3. Configure Ras Pi:
@@ -84,10 +84,10 @@ $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 	4. Enter the following content:
 ```
 # Auto-start `my-smart-home` on each boot
-@reboot ~/my-smart-home/get.sh && ~/my-smart-home/start.sh
+@reboot /opt/my-smart-home/get.sh && /opt/my-smart-home/start.sh
 
 # Auto-update of `my-smart-home`, daily at 3:30am
-30 3 * * * ~/my-smart-home/update.sh
+30 3 * * * /opt/my-smart-home/update.sh
 ```
 *
 	5. Leave the editor by pressing STRG+X, then Y, then ENTER

@@ -1,3 +1,3 @@
 #!/bin/bash
-cd ~/my-smart-home/
+cd /opt/my-smart-home/
 docker-compose up -d
