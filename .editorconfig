@@ -1,3 +1,7 @@
+#
+# 🛑 Think twice before editing this file! 🛑
+# ⚠️ This file is maintained via https://github.com/IanStorm/dev-settings-sync. ⚠️
+#
 root = true
 
 
@@ -12,6 +16,6 @@ trim_trailing_whitespace = true
 end_of_line = lf
 
 
-[*.{yaml,yml}]
+[{*.{yaml,yml},cupsd.conf*,package.json}]
 indent_size = 2
 indent_style = space
