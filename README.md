@@ -1,5 +1,7 @@
 # My Smart Home - Raspberry Pi
 
+[![GitHub Actions](https://img.shields.io/endpoint.svg?url=https%3A%2F%2Factions-badge.atrox.dev%2FIanStorm%2Fmy-smart-home-ras-pi%2Fbadge%3Fref%3Dmain&style=flat&label=build&logo=none)](https://actions-badge.atrox.dev/IanStorm/my-smart-home-ras-pi/goto?ref=main)
+
 Garage project for **private purposes**.
 Puts the following repos in action:
 * [IanStorm/my-home-printer](https://github.com/IanStorm/my-home-printer)
