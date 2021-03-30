@@ -24,34 +24,33 @@ Be sure to call the following hardware your own:
 * Permanent, i.e. dedicated to the Ras Pi:
 	* 1x Raspberry Pi *(here: Raspberry Pi 4, Model B, 2GB RAM)*
 	* 1x Micro SD card *(here: SanDisk Extreme 32GB)*
-	* 1x Power supply, Raspberry Pi-compatible *(here: Official USB-C Power Supply)*
+	* 1x Power supply, Raspberry Pi-compatible 🔌 *(here: Official USB-C Power Supply)*
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
 * Misc.:
 	* 1x USB printer, including power supply and USB cable *(here: HP Photosmart 5520)*
 	* 1x USB Zigbee sniffer *(here: CC2531)*
 
 
-### Prepare the software, pt. 1
-
-Follow the below step-by-step instructions:
+### Prepare the software, pt. 1 🦙 1️⃣
 
 1. Connect the Micro SD card to the computer
 2. Download, install, and run **Raspberry Pi Imager**:
 	* Tested with v1.2 on Windows
 	* Choose OS: Raspbian (other) -> **Raspbian Lite**
 	* Write to the Micro SD card
+2. Clone this repository.
 2. Enable SSH:
-	1. It may be required to eject and re-insert the SD card
+	1. Eject and re-insert the SD card
 	2. Open a file explorer, navigate to the drive called **"boot"**
-	2. Create a file called **`ssh`** (no extension, no content) on root level
+	2. Open another file explorer, navigate to the cloned repo
+	2. Copy all items from the cloned `SD_card/` folder to the SD card's root folder
 2. Eject the Micro SD card from the computer
 2. Insert the Micro SD card into the Ras Pi, connect the ethernet cable, connect the power supply; the Ras Pi will automatically start
 
 
-### Prepare the software, pt. 2
+### Prepare the software, pt. 2 🦙 2️⃣
 
-1. Clone this repository.
-2. `cd` inside the cloned folder.
+1. `cd` inside the cloned folder.
 2. Make sure to copy the (exactly same) file(s) from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./opt/my-smart-home/credentials/`.
 2. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
 2. Initially connect via SSH: `ssh pi@my-smart-home`
@@ -63,22 +62,14 @@ Follow the below step-by-step instructions:
 ## ...steady, ...
 
 1. Create file/folder structure:
-```
-$	ssh pi@my-smart-home 'bash -s' < ./prepare.sh
-```
+	* `$	ssh pi@my-smart-home 'bash -s' < ./prepare.sh`
 2. Copy relevant files to the Ras Pi:
-```
-$	scp -r ./opt/my-smart-home/ pi@my-smart-home:/opt/
-$	scp -r ./var/opt/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/var/opt/
-```
+	* `$	scp -r ./opt/my-smart-home/ pi@my-smart-home:/opt/`
+	* `$	scp -r ./var/opt/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/var/opt/`
 3. Configure Ras Pi:
-```
-$	ssh pi@my-smart-home 'bash -s' < ./configure.sh
-```
+	* `$	ssh pi@my-smart-home 'bash -s' < ./configure.sh`
 4. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
-```
-$	ssh pi@my-smart-home 'bash -s' < ./install.sh
-```
+	* `$	ssh pi@my-smart-home 'bash -s' < ./install.sh`
 5. Setup cron jobs for *my-smart-home*:
 	1. Connect via SSH again: `ssh pi@my-smart-home`
 	2. Start `crontab -e`, select `/bin/nano` as your editor if prompted
@@ -94,9 +85,7 @@ $	ssh pi@my-smart-home 'bash -s' < ./install.sh
 *
 	5. Leave the editor by pressing STRG+X, then Y, then ENTER
 	6. Restart the Ras Pi:
-```
-sudo reboot
-```
+		* `sudo reboot`
 
 
 ## ...go! 🏃‍♂️ 🏃‍♀️
@@ -105,7 +94,10 @@ Done!
 Now the Raspberry Pi is ready to rock your smart home. 🤘
 
 
-## Sources
+## Appendix
+
+
+### Sources 📙
 
 * [The official Raspberry Pi documentation](https://projects.raspberrypi.org/en/projects/raspberry-pi-getting-started)
 * https://www.paulin.at/projects/wall-e/building-instructions/software/setting-up-your-raspberry-pi/
