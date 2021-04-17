@@ -56,7 +56,8 @@ Be sure to call the following hardware your own:
 2. Initially connect via SSH: `ssh pi@my-smart-home`
 	* There will be a prompt to add the fingerprint, type `yes`
 	* The default credentials for any Ras Pi are `pi` (user) and `raspberry` (password)
-	* Close the SSH connection
+	1. Set a new password (for user `pi`): `passwd`
+	2. Close the SSH connection
 
 
 ## ...steady, ...
