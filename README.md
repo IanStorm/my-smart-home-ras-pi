@@ -78,7 +78,7 @@ Be sure to call the following hardware your own:
 	4. Enter the following content:
 ```
 # Auto-start `my-smart-home` on each boot
-@reboot /opt/my-smart-home/get.sh && /opt/my-smart-home/start.sh
+@reboot /opt/my-smart-home/on_booted.sh
 
 # Auto-update of `my-smart-home`, daily at 3:30am
 30 3 * * * /opt/my-smart-home/update.sh
