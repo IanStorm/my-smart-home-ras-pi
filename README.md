@@ -65,8 +65,9 @@ Be sure to call the following hardware your own:
 1. Create file/folder structure:
 	* `$	ssh pi@my-smart-home 'bash -s' < ./prepare.sh`
 2. Copy relevant files to the Ras Pi:
-	* `$	scp -r ./opt/my-smart-home/ pi@my-smart-home:/opt/`
-	* `$	scp -r ./var/opt/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/var/opt/`
+	1. Ensure correct file mode before copying: `$	chmod +x ./opt/my-smart-home/*.sh`
+	2. `$	scp -r ./opt/my-smart-home/ pi@my-smart-home:/opt/`
+	2. `$	scp -r ./var/opt/my-smart-home-zigbee2mqtt/ pi@my-smart-home:/var/opt/`
 3. Configure Ras Pi:
 	* `$	ssh pi@my-smart-home 'bash -s' < ./configure.sh`
 4. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
