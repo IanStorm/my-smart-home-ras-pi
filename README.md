@@ -4,7 +4,6 @@
 
 Garage project for **private purposes**.
 Puts the following repos in action:
-* [IanStorm/my-home-printer](https://github.com/IanStorm/my-home-printer)
 * [IanStorm/my-smart-home-mqtt](https://github.com/IanStorm/my-smart-home-mqtt)
 * [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red)
 * [IanStorm/my-smart-home-zigbee2mqtt](https://github.com/IanStorm/my-smart-home-zigbee2mqtt)
@@ -27,7 +26,6 @@ Be sure to call the following hardware your own:
 	* 1x Power supply, Raspberry Pi-compatible 🔌 *(here: Official USB-C Power Supply)*
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
 * Misc.:
-	* 1x USB printer, including power supply and USB cable *(here: HP Photosmart 5520)*
 	* 1x USB Zigbee sniffer *(here: CC2531)*
 
 

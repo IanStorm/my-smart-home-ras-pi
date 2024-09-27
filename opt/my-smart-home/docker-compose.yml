@@ -3,16 +3,6 @@ version: "3"
 
 services:
 
-  my-home-printer:
-    image: ianstorm/my-home-printer:latest
-    networks:
-      - home-net
-    ports:
-      - 631:631
-    privileged: true
-    volumes:
-      - /dev/bus/usb/:/dev/bus/usb/
-
   my-smart-home-mqtt:
     image: ianstorm/my-smart-home-mqtt:latest
     networks:
@@ -47,5 +37,4 @@ services:
 
 
 networks:
-  home-net:
   smart-home-net:
