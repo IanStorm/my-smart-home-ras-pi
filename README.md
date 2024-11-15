@@ -26,7 +26,7 @@ Be sure to call the following hardware your own:
 	* 1x Power supply, Raspberry Pi-compatible 🔌 *(here: Official USB-C Power Supply)*
 	* 1x Ethernet cable; WiFi access is alternatively possible, but won't be covered here
 * Misc.:
-	* 1x USB Zigbee sniffer *(here: CC2531)*
+	* 1x USB Zigbee gateway *(here: ConBee III)*
 
 
 ### Prepare the software, pt. 1 🦙 1️⃣

@@ -28,9 +28,11 @@ services:
     depends_on:
       - my-smart-home-mqtt
     devices:
-      - /dev/ttyACM0
+      - /dev/ttyUSB0
     networks:
       - smart-home-net
+    ports:
+      - 8099:8099
     volumes:
       - ./credentials/secret.yaml:/app/data/secret.yaml
       - /var/opt/my-smart-home-zigbee2mqtt/data/state.json:/app/data/state.json
