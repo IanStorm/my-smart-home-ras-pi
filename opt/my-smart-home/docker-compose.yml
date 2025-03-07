@@ -11,6 +11,7 @@ services:
           - mqtt-broker
     ports:
       - 1883:1883
+      - 8083:8083
 
   my-smart-home-node-red:
     image: ianstorm/my-smart-home-node-red:latest
