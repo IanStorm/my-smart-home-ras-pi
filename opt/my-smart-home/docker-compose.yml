@@ -3,6 +3,13 @@ version: "3"
 
 services:
 
+  my-home-status:
+    image: ianstorm/my-home-status:latest
+    env_file: ./credentials/docker-env.list
+    restart: always
+    ports:
+      - 8080:8080
+
   my-smart-home-mqtt:
     image: ianstorm/my-smart-home-mqtt:latest
     networks:
