@@ -5,7 +5,7 @@ services:
 
   my-home-status:
     image: ianstorm/my-home-status:latest
-    env_file: ./credentials/docker-env.list
+    env_file: ./credentials/status.env
     restart: always
     ports:
       - 8080:8080
