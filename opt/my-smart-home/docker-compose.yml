@@ -3,6 +3,16 @@ version: "3"
 
 services:
 
+  my-home-nginx:
+    image: ianstorm/my-home-nginx:latest
+    environment:
+      - DNS_RESOLVER=127.0.0.11
+      - MSH_MQTT_HOSTNAME=my-smart-home-mqtt
+      - MSH_NODERED_HOSTNAME=my-smart-home-node-red
+      - MSH_Z2M_HOSTNAME=my-smart-home-zigbee2mqtt
+    ports:
+      - 80:80
+
   my-home-status:
     image: ianstorm/my-home-status:latest
     env_file: ./credentials/status.env
