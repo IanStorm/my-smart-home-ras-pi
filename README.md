@@ -48,9 +48,7 @@ Be sure to call the following hardware your own:
 
 ### Prepare the software, pt. 2 🦙 2️⃣
 
-1. `cd` inside the cloned folder.
-2. Make sure to copy the (exactly same) file(s) from [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red) to `./opt/my-smart-home/credentials/`.
-2. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
+1. Register the Ras Pi under a proper host name in your router, e.g. *"my-smart-home"*
 2. Initially connect via SSH: `ssh pi@my-smart-home`
 	* There will be a prompt to add the fingerprint, type `yes`
 	* The default credentials for any Ras Pi are `pi` (user) and `raspberry` (password)
@@ -69,7 +67,20 @@ Be sure to call the following hardware your own:
 3. Configure Ras Pi:
 	* `$	ssh pi@my-smart-home 'bash -s' < ./configure.sh`
 4. Install *my-smart-home* dependencies (Mind: The Ras Pi will automatically restart after this step):
-	* `$	ssh pi@my-smart-home 'bash -s' < ./install.sh`
+	1. `ssh pi@my-smart-home 'bash -s' < ./install.sh`
+	2. Setup _Nextcloud_ client sync: [(source)](https://rclone.org/install/#linux)
+		1. Install `rclone`:
+```sh
+cd /tmp
+curl -O https://downloads.rclone.org/v1.69.1/rclone-v1.69.1-linux-arm-v7.deb
+sudo apt install ./rclone-*-linux-*.deb
+rm ./rclone-*.deb
+```
+*
+	*
+		2. Run `rclone config` and go through the setup; call the new remote **nextcloud**
+		* ☝ Nextcloud sync is done via _crontab_
+		* Make sure the contents of `/opt/my-smart-home/credentials/` are aligned with [IanStorm/my-smart-home-node-red](https://github.com/IanStorm/my-smart-home-node-red)
 5. Setup cron jobs for *my-smart-home*:
 	1. Connect via SSH again: `ssh pi@my-smart-home`
 	2. Start `crontab -e`, select `/bin/nano` as your editor if prompted
